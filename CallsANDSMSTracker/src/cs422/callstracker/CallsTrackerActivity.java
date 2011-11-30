@@ -10,22 +10,38 @@ import android.view.View;
 import android.widget.TextView;
 
 public class CallsTrackerActivity extends Activity {
-	private DBAdapter model;
+	private DBAdapter model = null;
 	
     /** Called when the activity is first created. */
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) 
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         model = new DBAdapter(this);
-        if(model.isEmpty(DatabaseOpenHelper.TBL_STORAGE)){
+        if(model.isEmpty(DatabaseOpenHelper.TBL_STORAGE))
+        {
         	startActivity(new Intent(this, Splash.class));
         }
         else
-        populateMain();
+        {
+        	populateMain();
+        }
     }
     
-    public void populateMain() {
+    public void btnEditPlan(View view) 
+    {
+    	startActivity(new Intent(this, EditPlan.class));
+    }
+    
+    public void btnResetPlan(View view) 
+    {	
+    	// TODO: Reset values here
+    	startActivity(new Intent(this, ResetPlan.class));
+    }
+    
+    public void populateMain() 
+    {
     	Cursor cursor = model.getValues(DatabaseOpenHelper.TBL_STORAGE);
     	cursor.moveToFirst();
     	TextView phoneNum = (TextView) findViewById(R.id.phone_num);
@@ -43,15 +59,5 @@ public class CallsTrackerActivity extends Activity {
     	TextView remSMS = (TextView) findViewById(R.id.rem_sms);
     	remSMS.setText("" + (cursor.getInt(17) - cursor.getInt(18)));
     	cursor.close();
-    }
-    
-    public void btnEditPlan(View view) {
-    	startActivity(new Intent(this, EditPlan.class));
-    }
-    
-    public void btnResetPlan(View view) {
-    	
-    	// TODO: Reset values here
-    	startActivity(new Intent(this, ResetPlan.class));
     }
 }
