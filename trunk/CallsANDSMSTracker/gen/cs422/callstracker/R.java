@@ -32,6 +32,7 @@ public final class R {
         public static final int Minutes_Used=0x7f060016;
         public static final int NinethNum=0x7f060026;
         public static final int Phone_Number=0x7f060003;
+        public static final int Reset_Plan=0x7f060033;
         public static final int SMS_Plan=0x7f060017;
         public static final int SMS_Used=0x7f06001a;
         public static final int SecondNum=0x7f06001f;
@@ -70,7 +71,8 @@ public final class R {
     public static final class layout {
         public static final int editplan=0x7f030000;
         public static final int main=0x7f030001;
-        public static final int splash=0x7f030002;
+        public static final int resetplan=0x7f030002;
+        public static final int splash=0x7f030003;
     }
     public static final class raw {
         public static final int kalimba=0x7f040000;
