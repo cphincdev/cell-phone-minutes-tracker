@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CallsAndSMSTracker</string>
+    <string name="phone_num">Phone Number</string>
+    <string name="tot_mins">Total Minutes</string>
+    <string name="used_mins">Minutes Used</string>
+    <string name="rem_mins">Minutes Remaining</string>
+    <string name="tot_sms">Total SMS</string>
+    <string name="used_sms">SMS Received/Sent</string>
+    <string name="rem_sms">SMS Remaining</string>
+    <string name="edit_plan">Edit Plan</string>
+    <string name="reset_plan">Reset Plan</string>
+    <string name="sms_plan">SMS Plan</string>
+    <string name="voice_plan">Voice Plan</string>
+</resources>

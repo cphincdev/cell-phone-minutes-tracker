@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:weightSum="1">
+	<LinearLayout android:layout_width="fill_parent"
+		android:id="@+id/linearLayout1" android:orientation="vertical"
+		android:layout_height="wrap_content">
+		<TableLayout android:layout_height="wrap_content"
+			android:id="@+id/tableLayout2" android:layout_width="fill_parent"
+			android:stretchColumns="1,2">
+			<TableRow android:id="@+id/tableRow6" android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView android:layout_height="wrap_content" android:id="@+id/Phone_Number"
+					android:text="111-111-1111" android:layout_width="fill_parent"></TextView>
+				<TextView android:text="Edit Plan" android:gravity="center"
+					android:id="@+id/Edit_Plan" android:layout_width="wrap_content"
+					android:layout_height="wrap_content"></TextView>
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+	<ScrollView android:id="@+id/scrollView1"
+		android:layout_alignTop="@+id/tableLayout1" android:layout_width="fill_parent"
+		android:layout_height="314dp" android:layout_weight="0.31">
+		<LinearLayout android:id="@+id/linearLayout2"
+			android:layout_width="fill_parent" android:layout_height="36dp">
+			<TableLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/tableLayout1"
+				android:layout_weight="0.04" android:stretchColumns="1">
+				<TableRow android:id="@+id/tableRow" android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView android:layout_height="wrap_content" android:id="@+id/Service_Number"
+					android:text="Service Provider" android:layout_width="fill_parent"></TextView>
+				<EditText android:id="@+id/Service_Provider"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"></EditText>
+			</TableRow>
+				<TextView android:text="Bill Cycle Date" android:id="@+id/textView" android:gravity="center"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+				<DatePicker android:id="@+id/BillCycle"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"></DatePicker>
+					
+				<TextView android:text="Free Evenings Starting time" android:id="@+id/textView" android:gravity="center"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+				<TimePicker android:id="@+id/StartingTime" android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"></TimePicker>
+
+				<TextView android:text="Free Evenings Ending time" android:id="@+id/textView121" android:gravity="center"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+				<TimePicker android:id="@+id/EndingTime" android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"></TimePicker>
+				
+				<CheckBox android:text="Weekends Free" android:id="@+id/WeekendsFree" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+						
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<CheckBox android:text="Caller Id" android:id="@+id/Caller_Id" android:onClick="updateEditabilityOfMinutes"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+					<CheckBox android:text="Incoming" android:id="@+id/Incoming" android:onClick="updateEditabilityOfMinutes"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Total Minutes" android:id="@+id/textView"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:id="@+id/Total_Minutes"
+						android:inputType="number" android:layout_height="wrap_content"
+						android:layout_width="wrap_content">
+						<requestFocus></requestFocus>
+					</EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Minutes Used" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:id="@+id/Minutes_Used"
+						android:layout_height="wrap_content"
+						android:inputType="number"
+						android:layout_width="wrap_content"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<CheckBox android:text="SMS Plan" android:id="@+id/SMS_Plan" android:onClick="updateEditabilityOfSMS"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+					<CheckBox android:text="Free Incomming SMS" android:id="@+id/Free_Incomming_SMS"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Total SMS" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="number"
+						android:id="@+id/Total_SMS"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="SMS Used" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="number"
+						android:id="@+id/SMS_Used"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Enter City of Residence"
+						android:id="@+id/textView3" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<EditText android:id="@+id/city" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></EditText>
+
+				</TableRow>
+				
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<CheckBox android:text="Fab 5  OR " android:id="@+id/Fab5"  android:onClick="updateEditabilityOfFavorite"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+					<CheckBox android:text="Fab 10" android:id="@+id/Fab10" android:onClick="updateEditabilityOfFavorite"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 1" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content" android:id="@+id/FirstNum"
+						android:layout_height="wrap_content" android:inputType="phone"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 2" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content" android:id="@+id/SecondNum"
+						android:layout_height="wrap_content" android:inputType="phone"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 3" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content" android:id="@+id/ThirdNum"
+						android:layout_height="wrap_content" android:inputType="phone"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 4" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="phone"
+						android:id="@+id/ForthNum"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 5" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="phone"
+						android:id="@+id/FifthNum"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 6" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="phone"
+						android:id="@+id/SixthNum"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 7" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="phone"
+						android:id="@+id/SeventhNum"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 8" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="phone"
+						android:id="@+id/EighthNum"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 9" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="phone"
+						android:id="@+id/NinethNum"></EditText>
+
+				</TableRow>
+				<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+					android:layout_width="wrap_content">
+					<TextView android:text="Number 10" android:id="@+id/textView3"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+					<EditText android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:inputType="phone"
+						android:id="@+id/TenthNum"></EditText>
+
+				</TableRow>
+			</TableLayout>
+		</LinearLayout>
+	</ScrollView>
+	<TableLayout android:layout_width="fill_parent"
+		android:gravity="right" android:layout_height="wrap_content"
+		android:id="@+id/tableLayout1" android:layout_weight="0.04"
+		android:stretchColumns="2,2">
+		<TableRow android:layout_height="fill_parent" android:id="@+id/tableRow1"
+			android:layout_width="wrap_content">
+			<Button android:id="@+id/Done" android:layout_width="wrap_content"
+				android:text="Update" android:layout_height="wrap_content"
+				android:onClick="btnUpdate"></Button>
+			<Button android:id="@+id/Cancel" android:layout_width="wrap_content"
+				android:text="Cancel" android:layout_height="wrap_content"
+				android:onClick="btnCancel"></Button>
+		</TableRow>
+	</TableLayout>
+
+</LinearLayout>
